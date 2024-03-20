@@ -3,6 +3,7 @@
 
 Projekt, jehož cílem je vytvořit funkční statický web. Od začátku.
 Odkaz na figma návrh webu: (https://www.figma.com/file/0Nl19Qeu5dm5dMq24KlOSH/Untitled-(Copy)?type=design&node-id=0%3A1&mode=design&t=l6QdrexYcKLbWLvy-1)
+GitHub Pages: (https://pslib-cz.github.io/2023-p2b-web-project-MichalRocek/)
 
 **Zadání:**
 Reálný statický web s fiktivním obsahem
