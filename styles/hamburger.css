@@ -1,0 +1,57 @@
+.hamburger {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger--button {
+    cursor: pointer;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    aspect-ratio: 1/1;
+    --line: 8px;
+}
+.hamburger--button span {
+    display: block;
+    width: 100%;
+    height: var(--line);
+    background-color: black;
+}
+
+
+.hamburger.is-active {
+    /*vzhled hamburger menu*/
+    background-color: white;
+    border: solid 2px black;
+
+    /*zobrazování hamburger menu*/
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 50%;
+}
+
+.hamburger__item {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.nav {
+    position: relative; /*umožňuje hamburger-menu vyskočit nad stránku*/
+}
+
+@media screen and (min-width: 760px) {
+    .hamburger--button {
+        display: none;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .hamburger.is-active {
+        position: static;
+        display: flex;
+        border: none;
+    }
+}

@@ -1,0 +1,9 @@
+:root {
+    --light: white;
+    --dark: black;
+    
+}
+
+.content-wrapper {
+    display: grid;
+}
