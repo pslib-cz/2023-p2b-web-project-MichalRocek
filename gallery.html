@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/hamburger.css">
     <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="./scripts/hamburger.js"></script>
     <title>RealNews | Gallery</title>
 </head>
@@ -36,7 +37,58 @@
 
         <!-- obsah stranky -->
         <main class="page__content">
-            
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            <div class="gallery">
+                <figure>
+                    <picture>
+                        <img src="./img/testImg1.png" class="img-responsive" alt="img1">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <img src="./img/testImg2.png" class="img-responsive" alt="img2">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <img src="./img/testImg3.png" class="img-responsive" alt="img3">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <img src="./img/testImg4.png" class="img-responsive" alt="img4">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <img src="./img/testImg3.png" class="img-responsive" alt="img3">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <img src="./img/testImg2.png" class="img-responsive" alt="img2">
+                    </picture>
+                </figure>
+                <figure>
+                    <picture>
+                        <img src="./img/testImg1.png" class="img-responsive" alt="img1">
+                    </picture>
+                </figure>
+            </div>
         </main>
         <footer class="page__footer">
             <span class="footer__info">&copy; RealNews, a.s.</span>
@@ -46,4 +98,5 @@
         </footer>
     </div>
 </body>
+
 </html>
