@@ -17,25 +17,29 @@
     display: block;
     width: 100%;
     height: var(--line);
-    background-color: black;
+    background-color: var(--dark);
 }
 
 
 .hamburger.is-active {
     /*vzhled hamburger menu*/
-    background-color: white;
-    border: solid 2px black;
+    background-color: var(--light);
+    border: solid 2px var(--dark);
 
     /*zobrazování hamburger menu*/
     display: block;
     position: absolute;
     right: 0;
-    left: 50%;
+    left: -80px;
 }
 
 .hamburger__item {
     list-style-type: none;
+}
+
+.hamburger__item a {
     text-decoration: none;
+    color: var(--dark);
 }
 
 .nav {

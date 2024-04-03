@@ -14,25 +14,25 @@
 </head>
 <body>
     <div class="content-wrapper">
-        <header>
+        <header class="page__header">
             <h1 class="main-heading">
                 RealNews
             </h1>
+            <nav class="nav"> 
+                <div role="button" aria-label="hamburger button" class="hamburger--button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <menu class="hamburger">
+                    <li class="hamburger__item hamburger__item--active"><a href="#">Domů</a></li>
+                    <li class="hamburger__item"><a href="#">Novinky</a></li>
+                    <li class="hamburger__item"><a href="#">O nás</a></li>
+                    <li class="hamburger__item"><a href="#">Galerie</a></li>
+                </menu>
+            </nav>
         </header>
-        <nav class="nav"> 
-            <div role="button" aria-label="hamburger button" class="hamburger--button">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <menu class="hamburger">
-                <li class="hamburger__item hamburger__item--active"><a href="#">Domů</a></li>
-                <li class="hamburger__item"><a href="#">Novinky</a></li>
-                <li class="hamburger__item"><a href="#">O nás</a></li>
-                <li class="hamburger__item"><a href="#">Galerie</a></li>
-            </menu>
-        </nav>
-        <main class="content">
+        <main class="page__content">
             <article class="content--block">
                 <h2>Zpravodajství RealNews</h2>
                 <p></p>
@@ -58,7 +58,7 @@
                 </figure>
             </article>
         </main>
-        <footer class="footer">
+        <footer class="page__footer">
             <span class="footer--info">&copy; RealNews, a.s.</span>
             <span class="footer--info">Michael Ročník P(2022&ndash;2026)B</span>
             <span class="footer--info">14.3.&ndash;11.4.2024</span>
