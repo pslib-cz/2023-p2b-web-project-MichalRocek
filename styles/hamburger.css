@@ -2,6 +2,7 @@
     display: none;
     margin: 0;
     padding: 0;
+    top: 0;
 }
 
 .hamburger--button {
@@ -18,23 +19,32 @@
     width: 100%;
     height: var(--line);
     background-color: var(--dark);
+    border-radius: calc(var(--line) /2);
 }
 
 
 .hamburger.is-active {
     /*vzhled hamburger menu*/
-    background-color: var(--light);
+    background-color: var(--prime);
     border: solid 2px var(--dark);
+    border-top: none;
 
     /*zobrazování hamburger menu*/
+    
     display: block;
     position: absolute;
+    top: 80px;
     right: 0;
     left: -80px;
 }
 
 .hamburger__item {
     list-style-type: none;
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.25em;
+    padding-left: 1em;
+    border-top: solid var(--dark) 1px;
 }
 
 .hamburger__item a {
