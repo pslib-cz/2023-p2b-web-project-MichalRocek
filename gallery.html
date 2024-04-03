@@ -7,32 +7,43 @@
     <meta name="author" content="Michal Roček, michal.rocek.022@pslib.cz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/hamburger.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <script src="./scripts/hamburger.js"></script>
     <title>RealNews | Gallery</title>
 </head>
 <body>
-    <header>
-        <h1 class="main-heading">
-            RealNews <span class="main-heading--sub">Galerie</span>
-        </h1>
-    </header>
-    <nav>
-        <menu>
-            <li><a href="#" class="hamburger__item">Domů</a></li>
-            <li><a href="#" class="hamburger__item">Novinky</a></li>
-            <li><a href="#" class="hamburger__item">O nás</a></li>
-            <li><a href="#" class="hamburger__item hamburger__item--active">Galerie</a></li>
-        </menu>
-    </nav>
-    <main>
-        <article></article>
-        <article></article>
-        <article></article>
-    </main>
-    <footer class="footer">
-        <span class="footer--info">&copy; RealNews, a.s.</span>
-        <span class="footer--info">Michael Ročník P(2022&ndash;2026)B</span>
-        <span class="footer--info">14.3.&ndash;11.4.2024</span>
-        <span class="footer--info">Jakékoliv užití či šíření obsahu bez souhlasu RealNews, a.s. a autora článku není povoleno. </span>
-    </footer>    
+    <div class="content-wrapper">
+        <header class="page__header">
+            <h1 class="main-heading">
+                RealNews <span class="main-heading--sub">Novinky</span>
+            </h1>
+            <!-- navigace -->
+            <nav class="nav"> 
+                <div role="button" aria-label="hamburger button" class="hamburger--button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <menu class="hamburger">
+                    <li class="hamburger__item"><a href="/">Domů</a></li>
+                    <li class="hamburger__item hamburger__item--active"><a href="./news.html">Novinky</a></li>
+                    <li class="hamburger__item"><a href="./about.html">O nás</a></li>
+                    <li class="hamburger__item"><a href="#">Galerie</a></li>
+                </menu>
+            </nav>
+        </header>
+
+        <!-- obsah stranky -->
+        <main class="page__content">
+            
+        </main>
+        <footer class="page__footer">
+            <span class="footer__info">&copy; RealNews, a.s.</span>
+            <span class="footer__info">Michael Ročník P(2022&ndash;2026)B</span>
+            <span class="footer__info">14.3.&ndash;11.4.2024</span>
+            <span class="footer__info">Jakékoliv užití či šíření obsahu bez souhlasu RealNews, a.s. a autora článku není povoleno. </span>
+        </footer>
+    </div>
 </body>
 </html>

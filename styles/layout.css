@@ -27,6 +27,12 @@
     text-align: center;
 }
 
+/*podnadpis*/
+.main-heading--sub {
+    display: block;
+    font-size: 0.5em;
+}
+
 .nav {
     padding: 20px 20px;
     grid-area: nav;
@@ -87,6 +93,8 @@
 
 .news__heading {
     font-weight: bold;
+    text-decoration: none;
+    color: var(--dark);
 }
 
 .news__peek {
