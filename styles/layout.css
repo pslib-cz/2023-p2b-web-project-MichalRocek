@@ -27,12 +27,13 @@
     text-align: center;
 }
 
-.page__nav {
+.nav {
+    padding: 20px 20px;
     grid-area: nav;
 }
 
-.nav {
-    padding: 20px 20px;
+.page__content {
+    padding: 0 1em;
 }
 
 .page__footer {
@@ -50,3 +51,71 @@
 .footer__info:not(:last-child) {
     border-bottom: solid var(--light) 2px;
 }
+
+/*responzivní obrázek*/
+.img-responsive {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+/*-----------------------*/
+/*Design odkazů na články*/
+
+/*Design figure s odkazem na článek*/
+.news {
+    margin: 0.25em 0;
+    max-height: 200px;
+    height: 20vw;
+    border: solid var(--dark) 1px;
+}
+
+/*Design obrázku k článku*/
+.news__img {
+    display: none;
+}
+
+/*Design názvu článku*/
+.news__text {
+    margin: auto 0.5em auto 0.5em;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.news__heading {
+    font-weight: bold;
+}
+
+.news__peek {
+    display: none;
+}
+
+@media screen and (min-width: 420px) {
+    .news__img {
+        display: block;
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+    .news {
+        height: 30vw;
+        display: flex;
+    }
+    .news__text {
+        display: grid;
+        grid-template-rows: auto 3em;
+    }
+    
+    .news__peek {
+        display: block;
+
+        /*Vyřešení přetečení textu*/
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 100%;
+    }
+}
+
