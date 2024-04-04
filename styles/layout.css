@@ -40,12 +40,12 @@
 
 .page__content {
     padding: 0 1em;
+    max-width: 840px;
+    margin: auto;
 }
 
 .page__footer {
     background-color: var(--gray);
-    display: flex;
-    flex-direction: column;
 }
 
 .footer__info {
@@ -101,6 +101,7 @@
     display: none;
 }
 
+/*desktop*/
 @media screen and (min-width: 420px) {
     .news__img {
         display: block;
@@ -127,3 +128,22 @@
     }
 }
 
+@media screen and (min-width: 760px) {
+    .footer__info {
+        display: inline;
+        gap: 0.25em;
+        flex-grow: 1;
+    }
+
+    .footer__info:not(:last-child) {
+        border: none;
+    }
+
+    .page__footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        justify-content: space-between;
+        padding: 1em 0;
+    }
+}

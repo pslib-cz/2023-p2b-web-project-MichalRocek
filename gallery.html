@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/hamburger.css">
     <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="./scripts/hamburger.js"></script>
     <title>RealNews | Gallery</title>
@@ -17,7 +18,7 @@
     <div class="content-wrapper">
         <header class="page__header">
             <h1 class="main-heading">
-                RealNews <span class="main-heading--sub">Novinky</span>
+                RealNews <span class="main-heading--sub">Gallery</span>
             </h1>
             <!-- navigace -->
             <nav class="nav"> 
@@ -27,23 +28,24 @@
                     <span></span>
                 </div>
                 <menu class="hamburger">
-                    <li class="hamburger__item"><a href="/">Domů</a></li>
-                    <li class="hamburger__item hamburger__item--active"><a href="./news.html">Novinky</a></li>
-                    <li class="hamburger__item"><a href="./about.html">O nás</a></li>
-                    <li class="hamburger__item"><a href="#">Galerie</a></li>
+                    <li class="hamburger__item"><a href="./index.html"><span class="icon-">home</span>Domů</a></li>
+                    <li class="hamburger__item"><a href="./news.html"><span class="icon-">news</span>Novinky</a></li>
+                    <li class="hamburger__item"><a href="./about.html"><span class="icon-">about</span>O nás</a></li>
+                    <li class="hamburger__item hamburger__item--active"><a href="#"><span class="icon-">gallery</span>Galerie</a></li>
                 </menu>
             </nav>
         </header>
 
         <!-- obsah stranky -->
         <main class="page__content">
+            
             <div class="swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
-                  <div class="swiper-slide">Slide 1</div>
-                  <div class="swiper-slide">Slide 2</div>
-                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
                 </div>
                 <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
@@ -51,41 +53,45 @@
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
+
             <div class="gallery">
                 <figure>
                     <picture>
-                        <img src="./img/testImg1.png" class="img-responsive" alt="img1">
+                        <img src="./img/testImg1.jpg" class="img-responsive" alt="img1">
                     </picture>
                 </figure>
                 <figure>
                     <picture>
-                        <img src="./img/testImg2.png" class="img-responsive" alt="img2">
+                        <img src="./img/testImg2.jpg" class="img-responsive" alt="img2">
                     </picture>
                 </figure>
                 <figure>
                     <picture>
-                        <img src="./img/testImg3.png" class="img-responsive" alt="img3">
+                        <img src="./img/testImg3.jpg" class="img-responsive" alt="img3">
                     </picture>
                 </figure>
                 <figure>
                     <picture>
-                        <img src="./img/testImg4.png" class="img-responsive" alt="img4">
+                        <img src="./img/testImg4.jpg" class="img-responsive" alt="img4">
                     </picture>
                 </figure>
                 <figure>
                     <picture>
-                        <img src="./img/testImg3.png" class="img-responsive" alt="img3">
+                        <img src="./img/testImg3.jpg" class="img-responsive" alt="img3">
                     </picture>
                 </figure>
                 <figure>
                     <picture>
-                        <img src="./img/testImg2.png" class="img-responsive" alt="img2">
+                        <img src="./img/testImg2.jpg" class="img-responsive" alt="img2">
                     </picture>
                 </figure>
                 <figure>
                     <picture>
-                        <img src="./img/testImg1.png" class="img-responsive" alt="img1">
+                        <img src="./img/testImg1.jpg" class="img-responsive" alt="img1">
                     </picture>
                 </figure>
             </div>
@@ -97,6 +103,30 @@
             <span class="footer__info">Jakékoliv užití či šíření obsahu bez souhlasu RealNews, a.s. a autora článku není povoleno. </span>
         </footer>
     </div>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+        
+    </script>
 </body>
 
 </html>
