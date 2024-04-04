@@ -34,7 +34,6 @@
 }
 
 .nav {
-    padding: 20px 20px;
     grid-area: nav;
 }
 
@@ -71,15 +70,32 @@
 
 /*Design figure s odkazem na článek*/
 .news {
-    margin: 0.25em 0;
+    margin: 0.5em auto;
     max-height: 200px;
     height: 20vw;
     border: solid var(--dark) 1px;
+    background-color: white;
+}
+
+.news.news--small {
+    max-width: 600px;
+}
+
+.news--big {
+    height: auto;
+    max-width: 300px;
+    max-height: none;
 }
 
 /*Design obrázku k článku*/
 .news__img {
     display: none;
+}
+
+.news--big .news__img {
+    display: block;
+    width: 80%;
+    margin: 10%;
 }
 
 /*Design názvu článku*/
@@ -91,10 +107,18 @@
     align-items: center;
 }
 
+.news--big .news__text {
+    padding: 0.5em;
+}
+
 .news__heading {
     font-weight: bold;
     text-decoration: none;
     color: var(--dark);
+}
+
+.news--big .news__heading {
+    text-align: center;
 }
 
 .news__peek {
@@ -103,21 +127,21 @@
 
 /*desktop*/
 @media screen and (min-width: 420px) {
-    .news__img {
+    .news--small .news__img {
         display: block;
         height: 100%;
         aspect-ratio: 1/1;
     }
-    .news {
+    .news--small.news {
         height: 30vw;
         display: flex;
     }
-    .news__text {
+    .news--small .news__text {
         display: grid;
         grid-template-rows: auto 3em;
     }
     
-    .news__peek {
+    .news--small .news__peek {
         display: block;
 
         /*Vyřešení přetečení textu*/
@@ -129,6 +153,20 @@
 }
 
 @media screen and (min-width: 760px) {
+    .page__header {
+        display: flex;
+        width: 100%;
+    }
+    .main-heading {
+        flex-grow: 1;
+    }
+    .main-heading--sub {
+        display: none;
+    }
+    .nav {
+        flex-grow: 1;
+    }
+    
     .footer__info {
         display: inline;
         gap: 0.25em;
@@ -145,5 +183,23 @@
         gap: 1em;
         justify-content: space-between;
         padding: 1em 0;
+    }
+
+    .news.news--big {
+        display: flex;
+        height: 50vw;
+        max-width: 760px;
+        max-height: 300px;
+    }
+
+    .news--big .news__img {
+        margin: 0;
+        width: auto;
+        height: 100%;
+        aspect-ratio: 1/1;
+    }
+
+    .news--big .news__text {
+        display: block;
     }
 }

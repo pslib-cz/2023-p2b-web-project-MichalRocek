@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="styles/gallery.css">
     <script src="./scripts/hamburger.js"></script>
     <title>RealNews | Gallery</title>
 </head>
@@ -18,7 +19,7 @@
     <div class="content-wrapper">
         <header class="page__header">
             <h1 class="main-heading">
-                RealNews <span class="main-heading--sub">Gallery</span>
+                RealNews <span class="main-heading--sub">Galerie</span>
             </h1>
             <!-- navigace -->
             <nav class="nav"> 
@@ -37,9 +38,9 @@
         </header>
 
         <!-- obsah stranky -->
-        <main class="page__content">
-            
+        <main class="page__content gallery">
             <div class="swiper">
+                <span class="swiper__head">Naši zpravodajové</span>
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                   <!-- Slides -->
@@ -57,7 +58,45 @@
                 <!-- If we need scrollbar -->
                 <div class="swiper-scrollbar"></div>
             </div>
-
+            <div class="swiper">
+                <span class="swiper__head">Fotky z terénu</span>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+            <div class="swiper">
+                <span class="swiper__head">Další</span>
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                  <div class="swiper-slide"><img src="./img/testImg1.jpg" class="img-responsive" alt="img1"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+<!--
             <div class="gallery">
                 <figure>
                     <picture>
@@ -95,6 +134,7 @@
                     </picture>
                 </figure>
             </div>
+            -->
         </main>
         <footer class="page__footer">
             <span class="footer__info">&copy; RealNews, a.s.</span>
