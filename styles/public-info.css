@@ -1,0 +1,21 @@
+.release-info {
+    --profile-size: 60px;
+    padding: 0.5em 0;
+    height: var(--profile-size);
+    display: grid;
+    grid-template-columns: var(--profile-size) auto;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    column-gap: 1em;
+}
+
+.release-info__profile {
+    grid-row: span 2;
+    border-radius: 50%;
+}
+
+.release-info__author, .release-info__date {
+    display: inline-block;
+    height: min-content;
+    font-style: italic;
+}

@@ -65,8 +65,16 @@
     aspect-ratio: 1/1;
 }
 
+.article__image {
+    width: 100%;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .img__desc {
     font-size: 0.8em;
+    text-align: center;
 }
 
 /*-----------------------*/
