@@ -7,8 +7,19 @@
     color: var(--dark);
     background-color: var(--light);
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
-
+/*
+.pokus {
+    display: block;
+    position: sticky;
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+}
+*/
 .page__header {
     /*rozložení*/
     display: grid;
@@ -25,6 +36,10 @@
 .main-heading {
     grid-area: heading;
     text-align: center;
+}
+
+.article__heading {
+    padding-left: 1em;
 }
 
 /*podnadpis*/
@@ -91,6 +106,7 @@
 
 .news.news--small {
     max-width: 600px;
+    min-height: 75px;
 }
 
 .news--big {
@@ -106,8 +122,7 @@
 
 .news--big .news__img {
     display: block;
-    width: 80%;
-    margin: 10%;
+    margin: 1em;
 }
 
 /*Design názvu článku*/
@@ -150,8 +165,9 @@
     }
     .news--small .news__text {
         display: grid;
-        grid-template-rows: auto 3em;
+        grid-template-rows: 1fr 1fr;
     }
+
     
     .news--small .news__peek {
         display: block;

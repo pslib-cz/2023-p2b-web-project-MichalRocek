@@ -34,7 +34,7 @@
     /*zobrazování hamburger menu*/
     display:block;
     z-index: 2;
-    top: auto;
+    top: 100%;
     bottom: -160px;
     right: 0;
     left: -160px;
@@ -44,7 +44,7 @@
     margin: 0;
     height: var(--size);
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: block;
     border-top: solid var(--dark) 1px;
 }
@@ -85,11 +85,15 @@
         position: static;
         width: 100%;
         height: 100%;
-        display: flex;
         align-items: end;
     }
     .hamburger.is-active {
         border: none;
+        display: flex;
+        position: static;
+        width: 100%;
+        height: 100%;
+        align-items: end;
     }
     .hamburger__item {
         flex-shrink: 0;
