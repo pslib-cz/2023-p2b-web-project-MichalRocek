@@ -1,8 +1,8 @@
 :root {
     --light: rgb(240, 240, 240);
-    --dark: rgb(20, 75, 58);
-    --prime: rgb(118, 247, 187);
-    --second:  red;
+    --dark: rgb(0, 81, 12);
+    --prime: rgb(118, 247, 144);
+    --second:  rgb(0, 116, 199);
     --gray: rgb(160, 160, 160);
     color: var(--dark);
     background-color: var(--light);
@@ -23,14 +23,23 @@
 .page__header {
     /*rozložení*/
     display: grid;
-    grid-template-columns: 1fr 80px;
+    grid-template-columns: 80px 1fr 80px;
     grid-template-areas: 
-    "heading nav";
+    "logo heading nav";
 
     /*vzhled*/
     color: var(--dark);
     background-color: var(--prime);
     border-bottom: solid var(--dark) 2px;
+}
+
+.logo {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    grid-area: logo;
 }
 
 .main-heading {
@@ -83,13 +92,18 @@
 .article__image {
     width: 100%;
     max-width: 360px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .img__desc {
     font-size: 0.8em;
     text-align: center;
+}
+
+.link {
+    color: var(--second);
+    text-decoration: none;
+    font-style: italic;
 }
 
 /*-----------------------*/
@@ -182,19 +196,36 @@
 
 @media screen and (min-width: 760px) {
     .page__header {
-        display: flex;
+        display: grid;
+        grid-template-columns: 80px 3fr 7fr;
         width: 100%;
         max-width: 960px;
         margin: 0 auto;
     }
     .main-heading {
-        flex-grow: 1;
+        flex-grow: 3;
     }
     .main-heading--sub {
         display: none;
     }
-    .nav {
+    .page__header::before {
+        content: "";
+        display: block;
         flex-grow: 1;
+    }
+    .nav {
+        flex-grow: 3;
+    }
+
+    .article__image.image--aside {
+        margin: 1em;
+        float: right;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
     }
     
     .footer__info {
