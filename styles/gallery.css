@@ -3,13 +3,11 @@
     max-width: 480px;
 }
 
-.swiper__head {
+.swiper__heading {
     display: inline-block;
     width: 100%;
-    font-size: 1.5em;
     text-align: center;
     margin: 0.83em 0 0.83em 0;
-    font-weight: bold;
 }
 
 .gallery {

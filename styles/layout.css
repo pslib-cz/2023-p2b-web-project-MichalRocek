@@ -2,7 +2,7 @@
     --light: rgb(240, 240, 240);
     --dark: rgb(0, 81, 12);
     --prime: rgb(118, 247, 144);
-    --second:  rgb(0, 116, 199);
+    --second:  rgb(18, 176, 0);
     --gray: rgb(160, 160, 160);
     color: var(--dark);
     background-color: var(--light);
@@ -47,15 +47,21 @@
     text-align: center;
 }
 
-.article__heading {
-    padding-left: 1em;
-}
-
 /*podnadpis*/
 .main-heading--sub {
     display: block;
     font-size: 0.5em;
 }
+
+.article__heading {
+    text-align: center;
+}
+
+.article__heading--small {
+    padding-left: 1em;
+}
+
+
 
 .nav {
     grid-area: nav;
@@ -109,6 +115,11 @@
 .bold {
     font-weight: bold;
 }
+
+.text {
+    text-align: justify;
+}
+
 /*-----------------------*/
 /*Design odkazů na články*/
 
@@ -152,7 +163,7 @@
 }
 
 .news--big .news__text {
-    padding: 0.5em;
+    margin: 1em;
 }
 
 .news__heading {
@@ -167,6 +178,7 @@
 
 .news__peek {
     display: none;
+    text-align: justify;
 }
 
 /*desktop*/
