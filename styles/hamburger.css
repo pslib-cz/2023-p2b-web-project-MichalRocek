@@ -6,7 +6,7 @@
     top: 0;
 }
 
-.hamburger--button {
+.hamburger__button {
     --line: 8px;
     --size: 40px;
     cursor: pointer;
@@ -16,7 +16,7 @@
     justify-content: space-between;
     aspect-ratio: 1/1;
 }
-.hamburger--button span {
+.hamburger__button span {
     display: block;
     width: 100%;
     height: var(--line);
@@ -77,7 +77,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    .hamburger--button {
+    .hamburger__button {
         display: none;
     }
     .hamburger {

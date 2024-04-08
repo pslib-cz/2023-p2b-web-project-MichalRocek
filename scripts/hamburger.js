@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector(".hamburger--button")
+    const button = document.querySelector(".hamburger__button")
     const menu = document.querySelector(".hamburger")
 
     let toggleMenu = () => {
