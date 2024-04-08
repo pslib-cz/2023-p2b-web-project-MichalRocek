@@ -81,13 +81,15 @@
 .footer__info {
     display: block;
     text-align: center;
+    padding: 0.3em;
 }
 
 /*oddělení jednotlivých informací*/
+/*
 .footer__info:not(:last-child) {
     border-bottom: solid var(--light) 2px;
 }
-
+*/
 /*responzivní obrázek*/
 .img-responsive {
     width: 100%;
