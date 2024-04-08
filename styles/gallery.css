@@ -1,6 +1,6 @@
 .swiper {
     width: 80%;
-    max-width: 480px;
+    max-width: 600px;
 }
 
 .swiper__heading {
@@ -12,12 +12,17 @@
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
 }
 
 .swiper-slide {
     position: relative;
 }
+
+.swiper-slide .img-responsive {
+    aspect-ratio: 1/1;
+}
+
 .swiper-slide__desc {
     display: block;
     width: 100%;

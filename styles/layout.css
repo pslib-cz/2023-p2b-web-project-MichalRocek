@@ -41,6 +41,9 @@
     margin: auto;
     grid-area: logo;
 }
+.logo .img-responsive {
+    aspect-ratio: 1/1;
+}
 
 .main-heading {
     grid-area: heading;
@@ -67,7 +70,7 @@
 
 .page__content {
     padding: 0 1em;
-    max-width: 960px;
+    max-width: 1080px;
     margin: auto;
 }
 
@@ -90,12 +93,11 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    aspect-ratio: 1/1;
 }
 
 .article__image {
     width: 100%;
-    max-width: 360px;
+    max-width: 480px;
     margin: auto;
 }
 
@@ -144,6 +146,10 @@
 /*Design obrázku k článku*/
 .news__img {
     display: none;
+}
+
+.news__img .img-responsive {
+    aspect-ratio: 1/1;
 }
 
 .news--big .news__img {
@@ -212,7 +218,7 @@
         display: grid;
         grid-template-columns: 80px 3fr 7fr;
         width: 100%;
-        max-width: 960px;
+        max-width: 1080px;
         margin: 0 auto;
     }
     .main-heading {
