@@ -60,7 +60,7 @@
   content: "\ea13";
 }
 
-.hamburger__item .icon-::after {
+.toggle-menu__item .icon-::after {
   content: "";
   display: inline-block;
   width: 1em;

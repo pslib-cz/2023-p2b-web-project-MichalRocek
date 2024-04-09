@@ -25,7 +25,7 @@
     display: grid;
     grid-template-columns: 80px 1fr 80px;
     grid-template-areas: 
-    "logo heading nav";
+    "logo heading hamburger";
 
     /*vzhled*/
     color: var(--dark);
@@ -64,8 +64,8 @@
     padding-left: 1em;
 }
 
-.nav {
-    grid-area: nav;
+.hamburger {
+    grid-area: hamburger;
 }
 
 .page__content {
@@ -217,24 +217,27 @@
 
 @media screen and (min-width: 768px) {
     .page__header {
-        display: grid;
-        grid-template-columns: 80px 3fr 7fr;
+        grid-template-columns: 1fr 80px 220px 1fr;
+        grid-template-areas: 
+        ". logo heading ."
+        "menu menu menu menu";
         width: 100%;
         max-width: 1080px;
         margin: 0 auto;
     }
+
+    .hamburger {
+        grid-area: menu;
+    }
+
     .main-heading {
         flex-grow: 3;
     }
     .main-heading--sub {
         display: none;
     }
-    .page__header::before {
-        content: "";
-        display: block;
-        flex-grow: 1;
-    }
-    .nav {
+    
+    .hamburger {
         flex-grow: 3;
     }
 

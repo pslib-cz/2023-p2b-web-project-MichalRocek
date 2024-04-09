@@ -1,4 +1,4 @@
-.hamburger {
+.toggle-menu {
     display: none;
     position: absolute;
     margin: 0;
@@ -25,22 +25,22 @@
 }
 
 
-.hamburger.is-active {
-    /*vzhled hamburger menu*/
+.toggle-menu.is-active {
+    /*vzhled toggle-menu menu*/
     background-color: var(--prime);
     border: solid 2px var(--dark);
     border-top: none;
 
-    /*zobrazování hamburger menu*/
+    /*zobrazování toggle-menu menu*/
     display:block;
     z-index: 2;
     top: 100%;
-    bottom: -160px;
+    bottom: -200px;
     right: 0;
     left: -160px;
 }
 
-.hamburger__item {
+.toggle-menu__item {
     margin: 0;
     height: var(--size);
     list-style-type: none;
@@ -49,7 +49,7 @@
     border-top: solid var(--dark) 1px;
 }
 
-.hamburger__item a {
+.toggle-menu__item a {
     text-decoration: none;
     display: block;
     padding-left: 2em;
@@ -58,17 +58,17 @@
     line-height: 2em;
 }
 
-.hamburger__item--active {
+.toggle-menu__item--active {
     background-color: var(--dark);
 }
 
-.hamburger__item--active a {
+.toggle-menu__item--active a {
     
     color: var(--prime);
 }
 
-.nav {
-    position: relative; /*umožňuje hamburger-menu vyskočit nad stránku*/
+.hamburger {
+    position: relative; /*umožňuje toggle-menu-menu vyskočit nad stránku*/
 
     /*vertikální zarovnání*/
     display: flex;
@@ -80,14 +80,14 @@
     .hamburger__button {
         display: none;
     }
-    .hamburger {
+    .toggle-menu {
         display: flex;
         position: static;
         width: 100%;
         height: 100%;
         align-items: end;
     }
-    .hamburger.is-active {
+    .toggle-menu.is-active {
         border: none;
         display: flex;
         position: static;
@@ -95,7 +95,7 @@
         height: 100%;
         align-items: end;
     }
-    .hamburger__item {
+    .toggle-menu__item {
         flex-shrink: 0;
         flex-grow: 1;
         border: none;
@@ -103,7 +103,7 @@
         border: solid var(--dark) 1px;
         border-radius: 10px 10px 0 0;
     }
-    .hamburger__item a {
+    .toggle-menu__item a {
         padding: 0;
         text-align: center;
         height: min-content;
