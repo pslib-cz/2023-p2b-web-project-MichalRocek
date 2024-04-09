@@ -1,0 +1,13 @@
+.sign-in {
+    width: 100%;
+    max-width: 360px;
+    margin: auto;
+}
+
+.form__input {
+    margin: 1em;
+}
+
+.input__heading {
+    display: block;
+}

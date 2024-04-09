@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <!-- metadata s informacemi o stránce -->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="realnews, zprávy, přihlášení, projekt, it">
+    <meta name="description" content="RealNews &ndash; ověřené zprávy z celého světa, přihlášení k účtu">
+    <meta name="author" content="Michal Roček, michal.rocek.022@pslib.cz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- styly -->
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/hamburger.css">
+    <link rel="stylesheet" href="./styles/layout.css">
+    <link rel="stylesheet" href="./styles/icons.css">
+    <link rel="stylesheet" href="./styles/form.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="RealNews">
+    <meta name="application-name" content="RealNews">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- scripty -->
+    <script src="./scripts/hamburger.js"></script>
+
+    <!-- title -->
+    <title>RealNews | Přihlášení</title>
+</head>
+<body>
+    <div class="content-wrapper">
+        <header class="page__header">
+            <div class="logo">
+                <img src="./img/logo.jpg" alt="Logo RealNews, zelený plyšový medvěd držící noviny" class="img-responsive">
+            </div>
+            <h1 class="main-heading">
+                RealNews <span class="main-heading--sub">Přihlášení</span>
+            </h1>
+            <!-- navigace -->
+            <nav class="hamburger"> 
+                <div role="button" aria-label="hamburger button" class="hamburger__button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <menu class="toggle-menu">
+                    <li class="toggle-menu__item"><a href="./index.html"><span class="icon-">home</span>Domů</a></li>
+                    <li class="toggle-menu__item"><a href="./news.html"><span class="icon-">news</span>Novinky</a></li>
+                    <li class="toggle-menu__item"><a href="./about.html"><span class="icon-">about</span>O nás</a></li>
+                    <li class="toggle-menu__item"><a href="./gallery.html"><span class="icon-">gallery</span>Galerie</a></li>
+                    <li class="toggle-menu__item toggle-menu__item--active"><a href="#"><span class="icon-">user</span>Přihlásit se</a></li>
+                </menu>
+            </nav>
+        </header>
+
+        <!-- obsah stranky -->
+        <main class="page__content">
+            
+            <form class="sign-in">
+                <h2 class="article__heading">Přihlaste se</h2>
+                <div class="form__input">
+                    <label for="uname" class="input__heading">Uživatelské jméno:</label>
+                    <input type="text" id="uname" name="uname">
+                </div>
+                <div class="form__input">
+                    <label for="pwd" class="input__heading">Heslo:</label>
+                    <input type="password" id="pwd" name="pwd">
+                </div>
+                <div class="form__input">
+                    <span class="input__heading">Pohlaví:</span>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">muž</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">žena</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">nechci uvádět</label>
+                </div>
+                <div class="form__input">
+                    <label for="role" class="input__heading">Vyberte typ účtu:</label>
+                    <select id="role" name="role">
+                        <option value="reporter_profesional">profesionální reportér</option>
+                        <option value="reporter_amateur">amatérský reportér</option>
+                        <option value="reader">čtenář</option>
+                    </select>
+                </div>
+            </form>
+        </main>
+        <footer class="page__footer">
+            <span class="footer__info">&copy; RealNews, a.s.</span>
+            <span class="footer__info">Michal Roček P(2022&ndash;2026)B</span>
+            <span class="footer__info">14.3.&ndash;11.4.2024</span>
+            <span class="footer__info">Jakékoliv užití či šíření obsahu bez souhlasu RealNews, a.s. a autora článku není povoleno. </span>
+            <span class="footer__info">Veškerý obsah těchto stránek je <span class="bold">NAPROSTO SMYŠLENÝ</span>. Všechny události, osoby a obrázky jsou smyšlené, či vytvořené umělou inteligencí. Účelem je parodovat existující zpravodajské weby, nikoli předávat informace.</span>
+        </footer>
+    </div>
+</body>
+</html>
