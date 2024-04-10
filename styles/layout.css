@@ -119,10 +119,6 @@
     font-weight: bold;
 }
 
-.text {
-    text-align: justify;
-}
-
 /*-----------------------*/
 /*Design odkazů na články*/
 
@@ -185,7 +181,6 @@
 
 .news__peek {
     display: none;
-    text-align: justify;
 }
 
 /*desktop*/
