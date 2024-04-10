@@ -11,3 +11,8 @@
 .input__heading {
     display: block;
 }
+
+.form__submit {
+    margin: 0 auto;
+    display: block;
+}
