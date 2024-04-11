@@ -10,17 +10,6 @@
     font-size: 18px;
 }
 
-/*
-.pokus {
-    display: block;
-    position: sticky;
-    bottom: 5px;
-    right: 5px;
-    width: 50px;
-    height: 50px;
-    background-color: white;
-}
-*/
 .page__header {
     /*rozložení*/
     display: grid;
@@ -100,7 +89,7 @@
 
 .article__image {
     width: 100%;
-    max-width: 480px;
+    max-width: 480px; /*mark*/
     margin: auto;
 }
 
@@ -124,16 +113,8 @@
 
 /*Design figure s odkazem na článek*/
 .news {
-    margin: 0.5em auto;
-    height: auto;
     border: solid var(--dark) 1px;
     background-color: white;
-    max-width: 300px;
-}
-
-.news.news--small {
-    max-width: 600px;
-    min-height: 75px;
 }
 
 /*Design obrázku k článku*/
@@ -149,7 +130,6 @@
 /*Design názvu článku*/
 .news__text {
     margin: 1em;
-    height: 100%;
     display: grid;
     grid-template-rows: 1fr;
     align-items: center;
@@ -174,6 +154,14 @@
     margin: 0.5em auto;
 }
 
+/*rozložení článků – grid pro jednodušší práci s články a responzivitou*/
+.content__block--news {
+    gap: 1em;
+    margin: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
 /*desktop*/
 @media screen and (min-width: 768px) {
     .page__header {
@@ -181,9 +169,6 @@
         grid-template-areas: 
         ". logo heading ."
         "menu menu menu menu";
-        width: 100%;
-        max-width: 1080px;
-        margin: 0 auto;
     }
 
     .hamburger {
@@ -230,15 +215,11 @@
 
     .news {
         display: flex;
-        height: 50vw;
-        max-width: 800px;
-        max-height: 270px;
+        height: 270px;
     }
 
     .news__img {
         margin: 0;
-        width: auto;
-        height: 100%;
         aspect-ratio: 1/1;
     }
 
@@ -256,4 +237,18 @@
         display: none;
     }
 
+    /*rozložení článků na větších zařízeních*/
+    .content__block--news {
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    }
+}
+
+/*Omezení headeru na větších monitorech*/
+@media screen and (min-width: 1280px) {
+    .page__header {
+        grid-template-columns: 1fr 440px 80px 220px 440px 1fr;
+        grid-template-areas: 
+        ". . logo heading . ."
+        ". menu menu menu menu .";
+    }
 }
