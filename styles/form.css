@@ -1,7 +1,9 @@
 .sign-in {
     width: 100%;
     max-width: 360px;
-    margin: auto;
+    margin: 2em auto;
+    background-color: white;
+    padding: 1em 0;
 }
 
 .form__input {
