@@ -31,6 +31,7 @@
     margin: auto;
     grid-area: logo;
 }
+
 .logo .img-responsive {
     aspect-ratio: 1/1;
 }
@@ -68,18 +69,21 @@
     background-color: var(--gray);
 }
 
-.footer__info {
+.footer__block {
+    padding: 1em 0;
+    border-bottom: solid var(--dark) 1px;
+}
+
+.footer__heading {
+    font-weight: bold;
+}
+
+.footer__info, .footer__heading {
     display: block;
     text-align: center;
     padding: 0.3em;
 }
 
-/*oddělení jednotlivých informací*/
-/*
-.footer__info:not(:last-child) {
-    border-bottom: solid var(--light) 2px;
-}
-*/
 /*responzivní obrázek*/
 .img-responsive {
     width: 100%;
@@ -88,8 +92,7 @@
 }
 
 .article__image {
-    width: 100%;
-    max-width: 480px; /*mark*/
+    max-width: 480px;
     margin: auto;
 }
 
@@ -162,6 +165,11 @@
     grid-template-columns: 1fr;
 }
 
+::selection {
+    color: red;
+    background-color: yellow;
+}
+
 /*desktop*/
 @media screen and (min-width: 768px) {
     .page__header {
@@ -183,34 +191,28 @@
         display: none;
     }
 
-    .article__image.image--aside {
-        margin: 1em;
-        float: right;
-    }
-
-    /*pokus s clearfixem*/
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-    
-    .footer__info {
-        display: inline;
-        gap: 0.25em;
-        flex-grow: 1;
-    }
-
     .footer__info:not(:last-child) {
         border: none;
     }
 
     .page__footer {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1em;
-        justify-content: space-between;
-        padding: 1em 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "contact author"
+        "warning warning";
+    }
+
+    #contact {
+        grid-area: contact;
+    }
+
+    #author {
+        grid-area: author;
+    }
+
+    #warning {
+        grid-area: warning;
     }
 
     .news {
@@ -243,12 +245,19 @@
     }
 }
 
-/*Omezení headeru na větších monitorech*/
+/*Omezení headeru a footeru na větších monitorech*/
 @media screen and (min-width: 1280px) {
     .page__header {
-        grid-template-columns: 1fr 440px 80px 220px 440px 1fr;
+        grid-template-columns: 1fr 490px 80px 220px 490px 1fr;
         grid-template-areas: 
         ". . logo heading . ."
         ". menu menu menu menu .";
+    }
+
+    .page__footer {
+        grid-template-columns: 1fr 640px 640px 1fr;
+        grid-template-areas:
+        ". contact author ."
+        ". warning warning .";
     }
 }

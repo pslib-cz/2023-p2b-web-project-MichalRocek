@@ -18,7 +18,6 @@
 }
 .hamburger__button span {
     display: block;
-    width: 100%;
     height: var(--line);
     background-color: var(--dark);
     border-radius: calc(var(--line) /2);
@@ -84,7 +83,6 @@
         display: flex;
         position: static;
         width: 100%;
-        height: 100%;
         align-items: end;
     }
     .toggle-menu.is-active {
@@ -92,7 +90,6 @@
         display: flex;
         position: static;
         width: 100%;
-        height: 100%;
         align-items: end;
     }
     .toggle-menu__item {
