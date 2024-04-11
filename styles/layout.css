@@ -125,10 +125,10 @@
 /*Design figure s odkazem na článek*/
 .news {
     margin: 0.5em auto;
-    max-height: 200px;
-    height: 20vw;
+    height: auto;
     border: solid var(--dark) 1px;
     background-color: white;
+    max-width: 300px;
 }
 
 .news.news--small {
@@ -136,88 +136,42 @@
     min-height: 75px;
 }
 
-.news--big {
-    height: auto;
-    max-width: 300px;
-    max-height: none;
-}
-
 /*Design obrázku k článku*/
 .news__img {
-    display: none;
+    display: block;
+    margin: 1em;
 }
 
 .news__img .img-responsive {
     aspect-ratio: 1/1;
 }
 
-.news--big .news__img {
-    display: block;
-    margin: 1em;
-}
-
 /*Design názvu článku*/
 .news__text {
-    margin: auto 0.5em auto 0.5em;
+    margin: 1em;
     height: 100%;
     display: grid;
     grid-template-rows: 1fr;
     align-items: center;
 }
 
-.news--big .news__text {
-    margin: 1em;
-}
-
 .news__heading {
+    text-align: center;
     font-weight: bold;
     text-decoration: none;
     color: var(--dark);
 }
 
-.news--big .news__heading {
-    text-align: center;
-}
-summary {
-    text-align: center;
-}
-
-details {
-    margin-top: 0.5em;
-    
+.news__peek {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
 }
 
-
-@media screen and (min-width: 420px) {
-    .news--small .news__img {
-        display: block;
-        height: 100%;
-        aspect-ratio: 1/1;
-    }
-    .news--small.news {
-        height: 30vw;
-        display: flex;
-    }
-    .news--small .news__text {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-    }
-
-    
-    .news--small .news__peek {
-        display: block;
-
-        /*Vyřešení přetečení textu*//*
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        width: 100%;*/
-    }
-    
+.news__peek summary {
+    text-align: center;
+    margin: 0.5em auto;
 }
 
 /*desktop*/
@@ -234,6 +188,7 @@ details {
 
     .hamburger {
         grid-area: menu;
+        flex-grow: 3;
     }
 
     .main-heading {
@@ -242,16 +197,13 @@ details {
     .main-heading--sub {
         display: none;
     }
-    
-    .hamburger {
-        flex-grow: 3;
-    }
 
     .article__image.image--aside {
         margin: 1em;
         float: right;
     }
 
+    /*pokus s clearfixem*/
     .clearfix::after {
         content: "";
         clear: both;
@@ -276,38 +228,32 @@ details {
         padding: 1em 0;
     }
 
-    .news.news--big {
+    .news {
         display: flex;
         height: 50vw;
         max-width: 800px;
         max-height: 270px;
     }
 
-    .news--big .news__img {
+    .news__img {
         margin: 0;
         width: auto;
         height: 100%;
         aspect-ratio: 1/1;
     }
 
-    .news--big .news__text {
+    .news__text {
         display: grid;
         grid-template-rows: 2fr 5fr;
     }
 
-    .news--big .news__heading {
+    .news__heading {
         font-size: 1.2em;
         text-align: left;
     }
 
-    details > summary {
-        list-style: none;
-    }
-    details summary::-webkit-details-marker {
-        display:none;
-    }
-
-    summary {
+    .news__peek > summary {
         display: none;
     }
+
 }
