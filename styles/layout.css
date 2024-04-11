@@ -178,12 +178,20 @@
 .news--big .news__heading {
     text-align: center;
 }
-
-.news__peek {
-    display: none;
+summary {
+    text-align: center;
 }
 
-/*desktop*/
+details {
+    margin-top: 0.5em;
+    
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+}
+
+
 @media screen and (min-width: 420px) {
     .news--small .news__img {
         display: block;
@@ -203,14 +211,16 @@
     .news--small .news__peek {
         display: block;
 
-        /*Vyřešení přetečení textu*/
+        /*Vyřešení přetečení textu*//*
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        width: 100%;
+        width: 100%;*/
     }
+    
 }
 
+/*desktop*/
 @media screen and (min-width: 768px) {
     .page__header {
         grid-template-columns: 1fr 80px 220px 1fr;
@@ -282,20 +292,22 @@
 
     .news--big .news__text {
         display: grid;
-        grid-template-rows: 2fr 3fr;
-    }
-
-    .news--big .news__peek {
-        display: block;
-        width:100%;
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-line-clamp: 4;
-        -webkit-box-orient: vertical;
+        grid-template-rows: 2fr 5fr;
     }
 
     .news--big .news__heading {
         font-size: 1.2em;
         text-align: left;
+    }
+
+    details > summary {
+        list-style: none;
+    }
+    details summary::-webkit-details-marker {
+        display:none;
+    }
+
+    summary {
+        display: none;
     }
 }
