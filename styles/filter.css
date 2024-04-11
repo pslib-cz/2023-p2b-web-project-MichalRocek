@@ -1,0 +1,26 @@
+.news--filtered {
+    display: none;
+}
+
+.filter__button {
+    border: solid var(--dark) 2px;
+    width: 10em;
+    height: 2em;
+    margin: 1em auto;
+    text-align: center;
+    line-height: 2em;
+
+}
+
+.filter__menu {
+    position: absolute;
+    display: none;
+}
+
+.filter__menu.is-active {
+    display: block;
+    background-color: white;
+    border: solid var(--dark) 2px;
+    width: 360px;
+    left: calc(50% - 180px);
+}

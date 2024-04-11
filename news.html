@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./styles/hamburger.css">
     <link rel="stylesheet" href="./styles/layout.css">
     <link rel="stylesheet" href="./styles/icons.css">
+    <link rel="stylesheet" href="./styles/filter.css">
+    <link rel="stylesheet" href="./styles/form.css">
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -28,6 +30,7 @@
     <!-- scripty -->
     <script src="./scripts/hamburger.js"></script>
     <script src="./scripts/peek_fix.js"></script>
+    <script src="./scripts/news_filter.js"></script>
 
     <!-- title -->
     <title>RealNews | Novinky</title>
@@ -60,8 +63,34 @@
 
         <!-- obsah stranky -->
         <main>
+            <!-- filtrování novinek -->
+            <div class="filter">
+                <div role="button" aria-label="filter button" class="filter__button"><span class="icon-">filter</span>Filtrovat</div>
+                <div class="filter__menu">
+                    <form onsubmit="return filterNews()" name="filtering">
+                        <div class="form__input">
+                            <input type="checkbox" id="jine" name="jine" value="jine">
+                            <label for="jine">Jiné</label>
+                        </div>
+                        <div class="form__input">
+                            <input type="checkbox" id="jidlo" name="jidlo" value="jidlo">
+                            <label for="jidlo">Jídlo</label>
+                        </div>
+                        <div class="form__input">
+                            <input type="checkbox" id="pocasi" name="pocasi" value="pocasi">
+                            <label for="pocasi">Počasí</label> 
+                        </div>
+                        <div class="form__input">
+                            <input type="checkbox" id="medvedi" name="medvedi" value="medvedi">
+                            <label for="medvedi">Medvědi</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- článek -->
             <div class="content__block--news">
-                <figure class="news">
+                <figure class="news jine">
                     <picture class="news__img">
                         <img src="./img/kostel.jpg" alt="Starý kostel, před ním stojí několik zvláštně oděných lidí" class="img-responsive">
                     </picture>
@@ -73,7 +102,9 @@
                         </details>
                     </figcaption>
                 </figure>
-                <figure class="news">
+
+                <!-- článek -->
+                <figure class="news medvedi">
                     <picture class="news__img">
                         <img src="./img/medved_jager.jpg" alt="Medvěd s lahví od alkoholu v tlapě, stojící v ulici" class="img-responsive">
                     </picture>
@@ -85,7 +116,9 @@
                         </details>
                     </figcaption>
                 </figure>
-                <figure class="news">
+
+                <!-- článek -->
+                <figure class="news jidlo">
                     <picture class="news__img">
                         <img src="./img/okurky_opice.jpg" alt="Australopitékus držící sklenici s nakládanými kyselými okurkami" class="img-responsive">
                     </picture>
@@ -97,7 +130,9 @@
                         </details>
                     </figcaption>
                 </figure>
-                <figure class="news">
+
+                <!-- článek -->
+                <figure class="news pocasi">
                     <picture class="news__img">
                         <img src="./img/horko.jpg" alt="Slunce nad uschlým polem" class="img-responsive">
                     </picture>
@@ -109,7 +144,9 @@
                         </details>
                     </figcaption>
                 </figure>
-                <figure class="news">
+
+                <!-- článek -->
+                <figure class="news jine">
                     <picture class="news__img">
                         <img src="./img/algoritmy.jpg" alt="Mapa světa s plánem pro obsazení" class="img-responsive">
                     </picture>
@@ -121,7 +158,9 @@
                         </details>
                     </figcaption>
                 </figure>
-                <figure class="news">
+
+                <!-- článek -->
+                <figure class="news jine">
                     <picture class="news__img">
                         <img src="./img/morce_attack.jpg" alt="Zahalený muž mířící pistolí na morče" class="img-responsive">
                     </picture>
@@ -133,7 +172,9 @@
                         </details>
                     </figcaption>
                 </figure>
-                <figure class="news">
+
+                <!-- článek -->
+                <figure class="news jine">
                     <picture class="news__img">
                         <img src="./img/prvni_clanek.jpg" alt="Obrázek novin na nástěnce, oznamujících zveřejnění prvního článku na webu RealNews" class="img-responsive">
                     </picture>
