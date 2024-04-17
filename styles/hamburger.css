@@ -34,7 +34,7 @@
     display:block;
     z-index: 2;
     top: 100%;
-    bottom: -200px;
+    bottom: -205px; /*5 * 40 px (40 px = 1 řádek) + 5 px (border width)*/
     right: 0;
     left: -160px;
 }
@@ -43,7 +43,6 @@
     margin: 0;
     height: var(--size);
     list-style-type: none;
-    font-size: 1.1rem;
     display: block;
     border-top: solid var(--dark) 1px;
 }

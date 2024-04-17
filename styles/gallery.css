@@ -1,6 +1,5 @@
 .swiper {
-    width: 80%;
-    max-width: 480px;
+    width: 100%;
 }
 
 .swiper__heading {
@@ -12,7 +11,9 @@
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    margin: 0 2em 2em 2em;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
 }
 
 .swiper-slide {
