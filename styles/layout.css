@@ -98,7 +98,7 @@
 }
 
 .article__image {
-    max-width: 480px;
+    max-width: 576px;
     margin: auto;
 }
 
@@ -128,7 +128,6 @@
 
 /*Design obrázku k článku*/
 .news__img {
-    display: block;
     margin: 1em;
 }
 

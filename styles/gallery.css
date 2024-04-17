@@ -11,9 +11,17 @@
 
 .gallery {
     display: grid;
-    margin: 0 2em 2em 2em;
-    gap: 2em;
-    grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+    margin-bottom: 2em;
+    column-gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+/*fixnutí nepříjemnosti s marginem a malou obrazovkou*/
+@media screen and (min-width: 440px) {
+    .gallery {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
 }
 
 .swiper-slide {
