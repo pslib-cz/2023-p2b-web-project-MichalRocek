@@ -3,10 +3,13 @@
     margin: 2em auto;
     background-color: white;
     padding: 1em 0;
+    border: solid var(--dark) 1px;
+    border-radius: 10px;
 }
 
 .form__input {
     margin: 1em;
+    accent-color: var(--second);
 }
 
 .input__heading {
@@ -15,5 +18,10 @@
 
 .form__submit {
     margin: 1em auto;
+    padding: 0.25em 0.5em;
     display: block;
+    border-radius: 0.3em;
+    border-color: var(--dark);
+    color: white;
+    background-color: var(--second);
 }
