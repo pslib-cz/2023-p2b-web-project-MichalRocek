@@ -10,7 +10,12 @@
     text-align: center;
     line-height: 2em;
     cursor: pointer;
+}
 
+.filter__button .icon-::after {
+    content: "";
+    display: inline-block;
+    width: 1em;
 }
 
 .form__input label {

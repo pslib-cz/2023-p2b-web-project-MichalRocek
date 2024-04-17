@@ -1,5 +1,5 @@
 .sign-in {
-    max-width: 360px;
+    width: 320px;
     margin: 2em auto;
     background-color: white;
     padding: 1em 0;
@@ -14,6 +14,7 @@
 
 .input__heading {
     display: block;
+    margin-bottom: 0.1em;
 }
 
 .form__submit {
