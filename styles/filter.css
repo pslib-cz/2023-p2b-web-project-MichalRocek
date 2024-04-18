@@ -26,7 +26,7 @@
 .filter__option label {
     display: inline-block;
     padding-left: 1em;
-    width: 100%;
+    width: clac(100% - 1em); /*kratší o padding*/
     height: 2em;
     line-height: 2em;
     cursor: pointer;
@@ -56,6 +56,6 @@
     display: block;
     background-color: white;
     border: solid var(--dark) 2px;
-    width: 360px;
+    width: 356px;
     left: calc(50% - 180px);
 }
