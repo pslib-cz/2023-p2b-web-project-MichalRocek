@@ -171,8 +171,8 @@
 }
 
 ::selection {
-    color: red;
-    background-color: yellow;
+    color: var(--prime);
+    background-color: var(--gray);
 }
 
 /*desktop*/
